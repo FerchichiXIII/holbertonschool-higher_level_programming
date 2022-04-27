@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 number = 3.14159
-print(float,f"Float: {number}")
+precision = 2
+print("{:.{}f}".format(number, precision))
+
