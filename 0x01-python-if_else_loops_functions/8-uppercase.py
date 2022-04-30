@@ -1,4 +1,4 @@
 #!/usr/bin/python3
+from math import gcd
 def uppercase(str):
-	for i in str:
-		
+   print(str.swapcase())
