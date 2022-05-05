@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
-    nlist = my_list[:]
+    n_list = my_list[:]
     if my_list == 0:
         return None
-    for i in range(0, len(nlist)):
+    for i in range(0, len(n_list)):
         if i % 2 == 0:
-            nlist[i] = True
+            n_list[i] = True
         else:
-            nlist[i] = False
-    return nlist
+            n_list[i] = False
+    return n_list
