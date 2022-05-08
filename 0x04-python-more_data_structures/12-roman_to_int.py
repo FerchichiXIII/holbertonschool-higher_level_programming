@@ -2,13 +2,8 @@
 def roman_to_int(roman_string):
     if roman_string == None:
         return 0
-    elif roman_string == "X":
-        return 10
-    elif roman_string == "VII":
-        return 7
-    elif roman_string == "IX":
-        return 9
-    elif roman_string == "LXXXVII":
-        return 87
-    elif roman_string == "DCCVII":
-        return 707
+    num = 0
+    roman_num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    for i in roman_string:
+        num += roman_num.get(i, 0)
+    return num
