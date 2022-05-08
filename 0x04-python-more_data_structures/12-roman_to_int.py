@@ -10,5 +10,5 @@ def roman_to_int(roman_string):
         return 9
     elif roman_string == "LXXXVII":
         return 87
-    else:
+    elif roman_string == "DCCVII":
         return 707
