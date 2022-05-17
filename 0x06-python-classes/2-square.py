@@ -4,7 +4,6 @@
 
 class Square:
     """class square"""
-
     def __init__(self, size=0):
         """initialsation"""
         if type(size) != int:
