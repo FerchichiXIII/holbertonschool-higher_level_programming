@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Access and update private attribute """
+""" Printing a square """
 
 
 class Square:
@@ -29,4 +29,12 @@ class Square:
             """value"""
             self.__size = value
 
-
+    def my_print(self):
+        """printing"""
+        if self.__size == 0:
+            print("")
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print("")
