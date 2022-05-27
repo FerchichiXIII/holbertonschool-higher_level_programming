@@ -1,27 +1,32 @@
-Import say_my_name from 3-say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
-	>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name ("messi" , 10)
+Traceback (most recent call last):
+TypeError: last_name must be a string
 
-test:
+>>> say_my_name (89 ,"betty")
+Traceback (most recent call last):
+TypeError: first_name must be a string
 
-	>>> say_my_name ("heisenberg")
-	My name is heisenberg
-	>>> say_my_name("anas","ferchichi")
-	My name is anas ferchichi
-	>>> say_my_name ("messi", "10")
-	My name is name is messi 10
-	>>> say_my_name ("messi" , 10)
-	Traceback (most recent call last):
-		TypeError: last_name must be a string
-	>>> say_my_name (89 ,"betty")
-	Traceback (most recent call last):
-		TypeError: first_name must be a string
-	>>> say_my_name (anas ,"ferchichi")
-	Traceback (most recent call last)
-		TypeError: first_name must be a string
-	>>> say_my_name ("FerchichiXIII", DRACONIAN)
-	Traceback (most recent call last)
-		TypeError: last_name must be a string
-	>>> say_my_name (anasferchichi)
-	Traceback (most recent call last):
-		TypeError: first_name must be a string
+>>> say_my_name (55"ferchichi")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name ("FerchichiXIII", 98)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name (69)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name ("heisenberg")
+My name is heisenberg
+
+>>> say_my_name("anas","ferchichi")
+My name is anas ferchichi
+
+>>> say_my_name("zlatan","ibrahim")
+
+>>> say_my_name ("messi", "10")
+My name is name is messi 10
