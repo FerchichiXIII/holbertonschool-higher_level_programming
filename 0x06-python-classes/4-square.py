@@ -28,5 +28,3 @@ class Square:
         else:
             """value"""
             self.__size = value
-
-
