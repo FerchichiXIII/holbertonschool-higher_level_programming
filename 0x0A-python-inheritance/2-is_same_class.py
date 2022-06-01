@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""My list"""
+"""Exact same object"""
+
+
 def is_same_class(obj, a_class):
-    """MyList that inherits from list"""
+    """Returns True if the object is exactly """
     return type(obj) is a_class
