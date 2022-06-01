@@ -5,9 +5,7 @@
 class MyList(list):
 
     """class mylist"""
-
-
-pass
+    pass
 
 
 def print_sorted(self):
