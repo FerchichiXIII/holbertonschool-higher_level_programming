@@ -7,5 +7,5 @@ class MyList(list):
     """class mylist"""
 
     def print_sorted(self):
-       p = sorted(self)
-       print (p)
+        p = sorted(self)
+        print(p)
