@@ -9,15 +9,15 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Base class"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
         """Width of this rectangle"""
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, width):
@@ -25,12 +25,12 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.width = width
 
     @property
     def height(self):
         """Height of this rectangle"""
-        return self.__height
+        return self.height
 
     @height.setter
     def height(self, height):
@@ -38,7 +38,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
-        self.__height = height
+        self.height = height
 
     @property
     def x(self):
@@ -51,12 +51,12 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.x = x
 
     @property
     def y(self):
         """Y of this class rectangle"""
-        return self.__y
+        return self.y
 
     @y.setter
     def y(self, y):
@@ -64,27 +64,27 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.y = y
 
     def area(self):
         """Area first"""
-        return self.__height * self.__width
+        return self.height * self.width
 
     def display(self):
         """Display"""
-        if self.__y != 0:
-            for i in range(self.__y):
+        if self.y != 0:
+            for i in range(self.y):
                 print()
 
-        for j in range(self.__height):
-            print((self.__x * " ") + (self.__width * "#"))
+        for j in range(self.height):
+            print((self.x * " ") + (self.width * "#"))
 
     def __str__(self):
         """__str__"""
 
         return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
-                                                self.id, self.__x, self.__y,
-                                                self.__width, self.__height)
+                                                self.id, self.x, self.y,
+                                                self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Update"""
