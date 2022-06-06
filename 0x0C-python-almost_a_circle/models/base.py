@@ -56,7 +56,8 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as f:
-                return [cls.create(**d) for d in cls.from_json_string(f.read())]
+                return [cls.create(**d)
+                        for d in cls.from_json_string(f.read())]
         except FileNotFoundError:
             return []
 
@@ -77,6 +78,7 @@ class Base:
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r") as f:
-                return [cls.create(**d) for d in cls.from_json_string(f.read())]
+                return [cls.create(**d)
+                        for d in cls.from_json_string(f.read())]
         except FileNotFoundError:
             return []
