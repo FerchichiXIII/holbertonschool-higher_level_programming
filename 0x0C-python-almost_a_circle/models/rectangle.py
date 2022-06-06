@@ -91,3 +91,13 @@ class Rectangle(Base):
         else:
             for j in kwargs:
                 setattr(self, j, kwargs[j])
+
+    def to_dictionary(self):
+        """To dictionary"""
+        dic = {}
+        dic["id"] = self.id
+        dic["width"] = self.width
+        dic["height"] = self.height
+        dic["x"] = self.x
+        dic["y"] = self.y
+        return dic
