@@ -9,10 +9,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Base class"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -81,14 +81,16 @@ class Rectangle(Base):
     def __str__(self):
         """__str__"""
 
-        return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                self.id, self.__x, self.__y,
+                                                self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """Update #0"""
-        l = ["id", "width", "height", "x", "y"]
+        list = ["id", "width", "height", "x", "y"]
         if (args):
             for i in range(len(args)):
-                setattr(self, l[i], args[i])
+                setattr(self, list[i], args[i])
         else:
             for j in kwargs:
                 setattr(self, j, kwargs[j])
