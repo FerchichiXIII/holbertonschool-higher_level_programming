@@ -9,13 +9,14 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Base class"""
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
+        """width of this class rectangle"""
         return self.__width
 
     @width.setter
@@ -28,6 +29,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """height of this class rectangle"""
         return self.__height
 
     @height.setter
@@ -40,6 +42,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x of this class rectangle"""
         return self.__x
 
     @x.setter
@@ -52,6 +55,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y of this class rectangle"""
         return self.__y
 
     @y.setter
