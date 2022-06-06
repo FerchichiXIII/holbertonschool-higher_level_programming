@@ -4,12 +4,10 @@
 
 class Base:
     """a public object"""
-
     __nb_objects = 0
 
     def __init__(self, id=None):
         """define the method parameter"""
-
         if id != None:
             self.id = id
         else:
