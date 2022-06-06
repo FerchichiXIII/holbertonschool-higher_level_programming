@@ -16,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Width of this class rectangle"""
+        """Width of this rectangle"""
         return self.__width
 
     @width.setter
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Height of this class rectangle"""
+        """Height of this rectangle"""
         return self.__height
 
     @height.setter
@@ -42,7 +42,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """X of this class rectangle"""
+        """X of this rectangle"""
         return self.__x
 
     @x.setter
@@ -71,10 +71,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        """
-        Display #0
-        Display #1
-        """
+        """Display"""
         if self.__y != 0:
             for i in range(self.__y):
                 print()
@@ -90,7 +87,7 @@ class Rectangle(Base):
                                                 self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """Update #0"""
+        """Update"""
         list = ["id", "width", "height", "x", "y"]
         if (args):
             for i in range(len(args)):
