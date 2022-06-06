@@ -39,3 +39,44 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """return an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """return a list of instances"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as f:
+                return [cls.create(**d) for d in cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save the json string representation to a file"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                f.write(cls.to_json_string([
+                    obj.to_dictionary() for obj in list_objs]))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """return a list of instances"""
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as f:
+                return [cls.create(**d) for d in cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
