@@ -2,7 +2,7 @@
 /**
  * quick_sort - Sorts an array of integers using the quick sort algorithm
  * @array: The array to be sorted
- * @size: Number of elements in @array
+ * @size: Number of elements
  * Return: Nothing
  */
 
