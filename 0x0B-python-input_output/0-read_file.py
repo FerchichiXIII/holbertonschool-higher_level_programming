@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""input output"""
+
+
 def read_file(filename=""):
-    with open(filename, "r", encoding="UFT-8") as f:
-        print(f.read(), end="")
+    """
+    read_file function
+    """
+    with open(filename, mode="r", encoding="utf-8") as f:
+        read_file = f.read()
+        print(read_file, end="")
