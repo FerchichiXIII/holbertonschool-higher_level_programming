@@ -8,5 +8,5 @@ CREATE TABLE
     );
 
 INSERT INTO
-    `second_table` (id, name, score)
+    `second_table` (`id`, `name`, `score`)
 VALUES (1, "Jhon", 10), (2, "Alex", 3), (3, "bob", 14), (4, "George", 8);
