@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""0x0A - 100-my_int.py"""
 
 class MY_INT(int):
     """class my_int"""
