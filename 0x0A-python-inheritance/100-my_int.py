@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """0x0A - 100-my_int.py"""
 
-class My_Int(int):
+
+class MyInt(int):
     """class my_int"""
 
     def __eq__(self, other):
