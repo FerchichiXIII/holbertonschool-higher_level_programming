@@ -1,10 +1,13 @@
 #!/usr/bin/node
-let answer = 1;
-if (isNaN(process.argv[2])) {
-  console.log('1');
-} else {
-  for (let i = 1; i <= process.argv[2]; i++) {
-    answer *= i;
+function factorial (n) {
+  let answer = 1;
+  if (n === 0 || n === 1) {
+    return answer;
+  } else {
+    for (let i = n; i >= 1; i--) {
+      answer = answer * i;
+    }
+    return answer;
   }
-  console.log(answer);
 }
+console.log(factorial(process.argv[2]));
