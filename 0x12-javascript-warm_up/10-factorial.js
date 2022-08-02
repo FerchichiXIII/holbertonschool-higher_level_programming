@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function factorial (n) {
   let answer = 1;
-  if (n === 0 || n === 1) {
+  if (isNaN(n)) {
     return answer;
   } else {
     for (let i = n; i >= 1; i--) {
