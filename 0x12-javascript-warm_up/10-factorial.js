@@ -4,7 +4,7 @@ function factorial (n) {
   if (isNaN(n)) {
     return answer;
   } else {
-    for (let i = n; i >= 1; i--) {
+    for (let i = n; i > 1; i--) {
       answer = answer * i;
     }
     return answer;
