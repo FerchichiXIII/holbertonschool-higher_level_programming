@@ -1,13 +1,9 @@
 #!/usr/bin/node
 function factorial (n) {
-  let answer = 1;
-  if (isNaN(n)) {
-    return answer;
+  if (isNaN(n) || n === 1) {
+    return 1;
   } else {
-    for (let i = n; i > 1; i--) {
-      answer = answer * i;
-    }
-    return answer;
+    return n * factorial(n - 1);
   }
 }
-console.log(factorial(process.argv[2]));
+console.log(factorial(parseInt(process.argv[2])));
