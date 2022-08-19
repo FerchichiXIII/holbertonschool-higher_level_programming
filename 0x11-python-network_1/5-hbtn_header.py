@@ -5,8 +5,9 @@ takes in a URL, sends a request to the URL and displays
 """
 
 import sys
-from urllib import request
+import requests
 
 if __name__ == "__main__":
-    with request.urlopen(sys.argv[1]) as response:
-        print(response.getheader('X-Request-Id'))
+    url = sys.argv[1]
+    response = requests.get(url)
+    print(response.headers.get('X-Request-Id'))
