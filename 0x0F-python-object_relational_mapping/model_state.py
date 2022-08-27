@@ -6,10 +6,10 @@ import sqlalchemy
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-base = declarative_base()
+Base = declarative_base()
 
 
-class State (base):
+class State (Base):
     """"Class State"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
